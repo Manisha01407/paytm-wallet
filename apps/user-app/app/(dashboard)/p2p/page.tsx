@@ -11,6 +11,7 @@ async function getOnRampTransactions() {
       fromUserId: Number(session?.user?.id),
     },
   });
+  console.log(txns);
   return txns.map((t) => ({
     time: t.timestamp,
     amount: t.amount,
