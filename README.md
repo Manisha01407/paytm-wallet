@@ -1,14 +1,22 @@
-- Clone the repo
+# TeckStack
+### Frontend and Backend - Next.js (or Backend)
+### Express - Auxilary backends
+### Turborepo
+### Postgres Database
+### Prisma ORM
+### Tailwind
+
+# Clone the repo
 
 ```jsx
-git clone https://github.com/100xdevs-cohort-2/week-17-final-code
+git clone https://github.com/Manisha01407/paytm-wallet.git
 ```
 
 - npm install
 - Run postgres either locally or on the cloud (neon.tech)
 
 ```jsx
-docker run  -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+docker run --name paytm-wallet -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=mydatabase -p 5432:5432 -d postgres
 ```
 
 - Copy over all .env.example files to .env
