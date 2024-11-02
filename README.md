@@ -5,6 +5,7 @@
 ### Postgres Database
 ### Prisma ORM
 ### Tailwind
+### CI/CD
 
 # Clone the repo
 
