@@ -33,7 +33,7 @@ export const AddMoney = () => {
             setValue(Number(val));
           }}
         />
-        <div className="py-4 text-left">Bank</div>
+        <div className="py-4 text-left px-1">Bank</div>
         <Select
           onSelect={(value) => {
             setRedirectUrl(
@@ -48,7 +48,7 @@ export const AddMoney = () => {
             value: x.name,
           }))}
         />
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-4 pb-1">
           <Button
             onClick={async () => {
               await createOnRampTransaction(provider, value);
