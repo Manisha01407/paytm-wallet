@@ -17,7 +17,11 @@ async function getBalance() {
     locked: balance?.locked || 0,
   };
 }
-
+enum OnRampStatus {
+  Success = "Success",
+  Failure = "Failure",
+  Processing = "Processing",
+}
 async function getOnRampTransactions() {
   const session = await getServerSession(authOptions);
   const txns = await prisma.onRampTransaction.findMany({
@@ -28,7 +32,7 @@ async function getOnRampTransactions() {
   return txns.map((t) => ({
     time: t.startTime,
     amount: t.amount,
-    status: t.status,
+    status: t.status as OnRampStatus, // This should now align with the local enum type
     provider: t.provider,
   }));
 }
