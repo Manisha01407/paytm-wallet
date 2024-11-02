@@ -6,6 +6,7 @@
 ### Prisma ORM
 ### Tailwind
 ### CI/CD
+### Docker
 
 # Clone the repo
 
