@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 import "./globals.css";
+import { Providers } from "../provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Providers } from "../provider";
 import { AppbarClient } from "../components/AppbarClient";
 
 const inter = Inter({ subsets: ["latin"] });
+const user = "mani";
 
 export const metadata: Metadata = {
   title: "Wallet",
