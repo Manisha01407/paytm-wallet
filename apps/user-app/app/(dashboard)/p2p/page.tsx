@@ -12,7 +12,7 @@ async function getOnRampTransactions() {
     },
   });
   console.log(txns);
-  return txns.map((t) => ({
+  return txns.map((t: { timestamp: Date; amount: number }) => ({
     time: t.timestamp,
     amount: t.amount,
   }));

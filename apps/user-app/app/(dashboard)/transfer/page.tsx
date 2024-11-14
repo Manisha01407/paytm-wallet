@@ -17,7 +17,11 @@ async function getBalance() {
     locked: balance?.locked || 0,
   };
 }
-
+enum OnRampStatus {
+  Success = "Success",
+  Failure = "Failure",
+  Processing = "Processing",
+}
 async function getOnRampTransactions() {
   const session = await getServerSession(authOptions);
   const txns = await prisma.onRampTransaction.findMany({
